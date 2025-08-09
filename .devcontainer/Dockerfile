@@ -1,12 +1,12 @@
 FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 
-# Install dependencies
+# Install Java 17 and dependencies needed by the Android command-line tools
 RUN apt-get update && \
-    apt-get install -y openjdk-11-jdk wget unzip git libc6-i386 lib32stdc++6 lib32gcc-s1 && \
+    apt-get install -y openjdk-17-jdk wget unzip git libc6-i386 lib32stdc++6 lib32gcc-s1 && \
     apt-get clean
 
-# Set environment variables
-ENV JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
+# Set JAVA_HOME for Java 17
+ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ENV ANDROID_SDK_ROOT=/opt/android-sdk
 
 # Download and install Android command-line tools
