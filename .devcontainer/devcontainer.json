@@ -7,7 +7,7 @@
         "terminal.integrated.shell.linux": "/bin/bash",
         "java.home": "/usr/lib/jvm/java-11-openjdk-amd64"
     },
-    "postCreateCommand": "./.devcontainer/post-create-setup.sh",
+    // "postCreateCommand": "./.devcontainer/post-create-setup.sh",
     "features": {},
     "remoteUser": "vscode",
     "mounts": [
