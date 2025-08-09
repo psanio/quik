@@ -1,0 +1,23 @@
+{
+    "name": "Android Gradle DevContainer",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "java.home": "/usr/lib/jvm/java-11-openjdk-amd64"
+    },
+    "postCreateCommand": "./.devcontainer/post-create-setup.sh",
+    "features": {},
+    "remoteUser": "vscode",
+    "mounts": [
+        "source=${localEnv:HOME}/.android,target=/home/vscode/.android,type=bind"
+    ],
+    "extensions": [
+        "vscjava.vscode-java-pack"
+    ],
+    "forwardPorts": [],
+    "runArgs": [
+        "--privileged"
+    ]
+}
